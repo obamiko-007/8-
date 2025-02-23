@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdeff9;
+    color: #5c0b56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideDown 2s ease-in-out;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    animation: bounceIn 2s ease-in-out;
+}
+
+.message {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Анимированный цветок */
+.flower-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    animation: rotateFlower 5s infinite linear;
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.petal1 {
+    top: 0;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.petal2 {
+    top: 50px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.petal3 {
+    bottom: 0;
+    left: 50px;
+    transform: translateY(50%);
+}
+
+.petal4 {
+    top: 50px;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #ff1493;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 3s infinite alternate;
+}
+
+/* Подвал */
+.footer {
+    font-size: 1rem;
+    margin-top: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateFlower {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ff1493;
+    }
+    to {
+        box-shadow: 0 0 20px #ff1493;
+    }
+}
